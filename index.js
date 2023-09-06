@@ -38,7 +38,7 @@ const gitQuestions = [
 
 const run = async () => {
     const { version, gitConfirm, npmConfirm } = await inquirer.prompt(questions);
-    const data = require("./package.json");
+    const data = JSON.parse(fs.readFileSync("./package.json", "utf8"));
     data.version = version;
     fs.writeFileSync("./package.json", JSON.stringify(data, null, 2));
     console.log(chalk.green(`Updated package.json to v${version}`));
