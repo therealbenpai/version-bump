@@ -44,7 +44,7 @@ const run = async () => {
     console.log(chalk.green(`Updated package.json to v${version}`));
     if (npmConfirm) {
         console.log(`Publishing to npm...`);
-        exec(`npm publish`);
+        exec(`npm publish --access=public`);
     }
     if (gitConfirm) {
         exec(`git add package.json && git commit -am "update to v${version}"`)
@@ -54,7 +54,7 @@ const run = async () => {
         exec(`git tag ${tagSign ? "-s" : ""} -m "Version ${version}" v${version}`);
         if (tagPush) {
             console.log(`Pushing git tag ${versionString}...`);
-            exec(`git push origin v${version}`);
+            exec(`git push -u origin v${version}`);
         }
     }
 }
