@@ -1,6 +1,6 @@
 {
-  "name": "verbump",
-  "version": "1.1.1",
+  "name": "@sparty182020/verbump",
+  "version": "1.1.0",
   "description": "Update you projects version with ease!",
   "main": "index.js",
   "scripts": {
