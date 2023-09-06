@@ -1,0 +1,25 @@
+{
+  "name": "verbump",
+  "version": "1.0.0",
+  "description": "Update you projects version with ease!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/therealbenpai/verbump.git"
+  },
+  "author": "therealbenpai",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/therealbenpai/verbump/issues"
+  },
+  "homepage": "https://github.com/therealbenpai/verbump#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.10"
+  },
+  "type":"module",
+  "bin": "./index.js"
+}
