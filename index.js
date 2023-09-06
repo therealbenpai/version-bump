@@ -47,7 +47,7 @@ const run = async () => {
         exec(`npm publish --access=public`);
     }
     if (gitConfirm) {
-        exec(`git add package.json && git commit -am "update to v${version}"`)
+        exec(`git add package.json && git commit -am "update to v${version}" && git push`)
         const { tagSign, tagPush } = await inquirer.prompt(gitQuestions);
         const versionString = chalk.green(`v${version}`);
         console.log(`Creating git tag ${versionString}...`);
