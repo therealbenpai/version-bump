@@ -51,10 +51,10 @@ const run = async () => {
         const { tagSign, tagPush } = await inquirer.prompt(gitQuestions);
         const versionString = chalk.green(`v${version}`);
         console.log(`Creating git tag ${versionString}...`);
-        exec(`git tag ${tagSign ? "-s" : ""} v${version}`);
+        exec(`git tag ${tagSign ? "-s" : ""} -m "Version ${version}" v${version}`);
         if (tagPush) {
             console.log(`Pushing git tag ${versionString}...`);
-            exec(`git push --tags`);
+            exec(`git push origin v${version}`);
         }
     }
 }
